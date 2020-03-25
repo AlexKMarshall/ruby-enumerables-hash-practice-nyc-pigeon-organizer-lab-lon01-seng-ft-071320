@@ -7,10 +7,9 @@ def nyc_pigeon_organizer(data)
   
   data.each_pair do |key, value|
     new_attribute = key
-    puts new_attribute
+
     value.each_pair do |key, value|
       new_value = key.to_s
-      puts new_value
       
       value.each do |name|
         if result[name]
@@ -23,12 +22,8 @@ def nyc_pigeon_organizer(data)
           result[name]= {}
           result[name][new_attribute] = [new_value]
         end
-        pp result
       end
         
-      #value.each do |el|
-      #  puts "#{el} => #{new_attribute} => #{new_value}"
-      #end
     end
   end
   
